@@ -20,3 +20,17 @@ body {
     max-height: 400px;
     overflow-y: auto;
 }
+
+.list-item {
+    display: flex;
+}
+
+.list-item__content, .list-item__action {
+    padding: 10px;
+    align-items: center;
+}
+
+.list-item__image img {
+    height: 80px;
+    border-radius: 50%;
+}
