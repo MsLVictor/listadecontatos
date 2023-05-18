@@ -3,6 +3,8 @@ html, body {
 }
 
 body {
+    font-family: sans-serif;
+    background: linear-gradient(to top right, #007bff, #00bfff);
     margin: 0;
     padding: 0;
 
@@ -13,7 +15,14 @@ body {
 
 }
 
+.list {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
 .list-wrapper {
+    border-radius: 10px;
     background-color: aliceblue;
     width: 90%;
     max-width: 500px;
@@ -23,14 +32,44 @@ body {
 
 .list-item {
     display: flex;
+    padding: 10px 10px;
+    transition: 0.5s;
 }
 
-.list-item__content, .list-item__action {
-    padding: 10px;
+.list-item__name {
+    font-size:  24px;
+    color: #385555;
+    margin: 0;
+}
+
+.list-item__email {
+    margin: 5px 0 0;
+    color: #aaa;
+}
+
+.list-item__content {
+    flex-grow: 1;
+    padding: 0 20px;
     align-items: center;
+}
+
+.list-item__action {
+    margin-right: 10px;
+    gap: 16px;
+    align-items: center;
+    opacity: 0;   
 }
 
 .list-item__image img {
     height: 80px;
     border-radius: 50%;
+}
+
+.list-item:hover {
+    background-color: #e8e8e8;
+}
+
+.list-item:hover .list-item__action {
+    display: flex;
+    opacity: 0.3;
 }
